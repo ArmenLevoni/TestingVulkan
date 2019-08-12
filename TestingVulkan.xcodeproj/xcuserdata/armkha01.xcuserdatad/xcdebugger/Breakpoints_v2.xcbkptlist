@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.356981"
+            timestampString = "587310662.452968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1144"
-            endingLineNumber = "1144">
+            startingLineNumber = "1193"
+            endingLineNumber = "1193">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.357276"
+            timestampString = "587310662.453331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1036"
-            endingLineNumber = "1036"
+            startingLineNumber = "1085"
+            endingLineNumber = "1085"
             landmarkName = "createInstance()"
             landmarkType = "7">
          </BreakpointContent>
@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.357507"
+            timestampString = "587310662.453704"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "710"
-            endingLineNumber = "710"
+            startingLineNumber = "759"
+            endingLineNumber = "759"
             landmarkName = "pickPhysicalDevice()"
             landmarkType = "7">
          </BreakpointContent>
@@ -56,11 +56,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.357715"
+            timestampString = "587310662.454015"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "759"
-            endingLineNumber = "759"
+            startingLineNumber = "808"
+            endingLineNumber = "808"
             landmarkName = "isDeviceSuitable(VkPhysicalDevice device)"
             landmarkType = "7">
          </BreakpointContent>
@@ -72,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.357922"
+            timestampString = "587310662.454368"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "997"
-            endingLineNumber = "997"
+            startingLineNumber = "1046"
+            endingLineNumber = "1046"
             landmarkName = "findQueueFamilies(VkPhysicalDevice device)"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.358128"
+            timestampString = "587310662.454722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "985"
-            endingLineNumber = "985"
+            startingLineNumber = "1034"
+            endingLineNumber = "1034"
             landmarkName = "findQueueFamilies(VkPhysicalDevice device)"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,11 +104,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.3583339"
+            timestampString = "587310662.455218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "967"
-            endingLineNumber = "967"
+            startingLineNumber = "1016"
+            endingLineNumber = "1016"
             landmarkName = "findQueueFamilies(VkPhysicalDevice device)"
             landmarkType = "7">
          </BreakpointContent>
@@ -120,11 +120,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.358554"
+            timestampString = "587310662.455562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "945"
-            endingLineNumber = "945"
+            startingLineNumber = "994"
+            endingLineNumber = "994"
             landmarkName = "class HelloTriangleApplication"
             landmarkType = "3">
          </BreakpointContent>
@@ -136,11 +136,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.358767"
+            timestampString = "587310662.455878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "956"
-            endingLineNumber = "956"
+            startingLineNumber = "1005"
+            endingLineNumber = "1005"
             landmarkName = "QueueFamilyIndices"
             landmarkType = "14">
          </BreakpointContent>
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.358976"
+            timestampString = "587310662.4561059"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1028"
-            endingLineNumber = "1028"
+            startingLineNumber = "1077"
+            endingLineNumber = "1077"
             landmarkName = "createInstance()"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.359203"
+            timestampString = "587310662.456326"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "699"
-            endingLineNumber = "699"
+            startingLineNumber = "748"
+            endingLineNumber = "748"
             landmarkName = "createSurface()"
             landmarkType = "7">
          </BreakpointContent>
@@ -184,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.3594069"
+            timestampString = "587310662.456538"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "858"
-            endingLineNumber = "858"
+            startingLineNumber = "907"
+            endingLineNumber = "907"
             landmarkName = "checkDeviceExtensionSupport(VkPhysicalDevice device)"
             landmarkType = "7">
          </BreakpointContent>
@@ -200,11 +200,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.35962"
+            timestampString = "587310662.456753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "604"
-            endingLineNumber = "604"
+            startingLineNumber = "653"
+            endingLineNumber = "653"
             landmarkName = "createGraphicsPipeline()"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,7 +216,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.360016"
+            timestampString = "587310662.4569629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "193"
@@ -232,12 +232,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TestingVulkan/main.cpp"
-            timestampString = "587308276.360269"
+            timestampString = "587310662.457175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
             endingLineNumber = "187"
             landmarkName = "findMemoryType(uint32_t typeFilter, VkMemoryPropertyFlags properties)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestingVulkan/main.cpp"
+            timestampString = "587310662.45739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "copyBuffer(VkBuffer srcBuffer, VkBuffer dstBuffer, VkDeviceSize size)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
