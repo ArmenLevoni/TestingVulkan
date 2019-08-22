@@ -1,0 +1,86 @@
+#version 450
+#extension GL_ARB_separate_shader_objects : enable
+
+#define WORKGROUP_SIZE 16
+#define WORK_TOTAL_SIZE 1024
+
+layout (local_size_x = WORKGROUP_SIZE, local_size_y = 1, local_size_z = 1 ) in;
+
+struct fe25519 {
+    int value [10];
+};
+
+struct duble_fe25519 {
+    fe25519 value [2];
+};
+
+
+layout(std140, set = 0, binding = 0) buffer buf1
+{
+    duble_fe25519 imageDataIn[];
+};
+
+layout(std140, set = 1, binding = 0) buffer buf2
+{
+    fe25519 imageDataOut[];
+};
+
+
+
+/* 37095705934669439343138083508754565189542113879843219016388785533085940283555 */
+const int[10] d = {-10913610, 13857413, -15372611, 6949391,   114729, -8787816, -6275908, -3247719, -18696448, -12055116};
+
+/* 2 * d =
+* 16295367250680780974490674513165176452449235426866156013048779062215315747161
+*/
+const int[10] d2 = {-21827239, -5839606,  -30745221, 13898782, 229458, 15978800, -12551817, -6495438, 29715968, 9444199 };
+
+/* sqrt(-1) */
+const int[10] sqrtm1 = {-32595792, -7943725,  9377950,  3500415, 12389472, -272473, -25146209, -2005654, 326686, 11406482};
+
+/* A = 486662 */
+const int[10] curve25519_A = {486662, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+fe25519  fe25519_sub(const fe25519 f, const fe25519 g)
+{
+    fe25519 h;
+    int h0 = f.value[0] - g.value[0];
+    int h1 = f.value[1] - g.value[1];
+    int h2 = f.value[2] - g.value[2];
+    int h3 = f.value[3] - g.value[3];
+    int h4 = f.value[4] - g.value[4];
+    int h5 = f.value[5] - g.value[5];
+    int h6 = f.value[6] - g.value[6];
+    int h7 = f.value[7] - g.value[7];
+    int h8 = f.value[8] - g.value[8];
+    int h9 = f.value[9] - g.value[9];
+
+    h.value[0] = h0;
+    h.value[1] = h1;
+    h.value[2] = h2;
+    h.value[3] = h3;
+    h.value[4] = h4;
+    h.value[5] = h5;
+    h.value[6] = h6;
+    h.value[7] = h7;
+    h.value[8] = h8;
+    h.value[9] = h9;
+    return h;
+}
+
+
+void main() {
+    /*
+    In order to fit the work into workgroups, some unnecessary threads are launched.
+    We terminate those threads here.
+    */
+    if(gl_GlobalInvocationID.x >= WORK_TOTAL_SIZE)
+    return;
+
+    for (int i=0; i<10;i++) {
+        imageDataOut[gl_GlobalInvocationID.x].value[i] = 11;// imageDataIn[gl_GlobalInvocationID.x].value[0];
+    }
+
+    //imageDataOut[gl_GlobalInvocationID.x] = fe25519_sub(imageDataIn[gl_GlobalInvocationID.x].value[0], imageDataIn[gl_GlobalInvocationID.x].value[1]);
+}
+
