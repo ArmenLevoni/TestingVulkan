@@ -15,6 +15,11 @@
 		3918E45722FC7D1D0099D9BC /* libvulkan.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3918E45622FC7D1D0099D9BC /* libvulkan.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3918E45922FC7D220099D9BC /* libglfw.3.4.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3918E45822FC7D220099D9BC /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3918E45C22FC7DCB0099D9BC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3918E45A22FC7DCB0099D9BC /* main.cpp */; };
+		39A358FA23045E93008D67D6 /* texture.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39A358F823045DFF008D67D6 /* texture.jpg */; };
+		39B09FD7230C309000E5514B /* BaseApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39B09FD5230C309000E5514B /* BaseApp.cpp */; };
+		39B09FDA230C392900E5514B /* ComputeMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39B09FD8230C392900E5514B /* ComputeMain.cpp */; };
+		39B09FDE230C5C9600E5514B /* comp.spv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39B09FDD230C5C9100E5514B /* comp.spv */; };
+		39B09FE1230EEB8300E5514B /* ed25519.spv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39B09FE0230ED3D400E5514B /* ed25519.spv */; };
 		39B5668522FDB25A00866553 /* vert.spv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39B5667B22FDB16900866553 /* vert.spv */; };
 		39B5668622FDB25A00866553 /* frag.spv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 39B5667C22FDB17A00866553 /* frag.spv */; };
 /* End PBXBuildFile section */
@@ -26,6 +31,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				39B09FE1230EEB8300E5514B /* ed25519.spv in CopyFiles */,
+				39B09FDE230C5C9600E5514B /* comp.spv in CopyFiles */,
+				39A358FA23045E93008D67D6 /* texture.jpg in CopyFiles */,
 				39B5668522FDB25A00866553 /* vert.spv in CopyFiles */,
 				39B5668622FDB25A00866553 /* frag.spv in CopyFiles */,
 				3918E45522FC7D160099D9BC /* libvulkan.1.1.114.dylib in CopyFiles */,
@@ -56,6 +64,15 @@
 		3918E45D22FCCEB30099D9BC /* optional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = optional.h; sourceTree = "<group>"; };
 		3918E45F22FDA5E30099D9BC /* shader.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.vert; sourceTree = "<group>"; };
 		3918E46022FDA5FE0099D9BC /* shader.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = shader.frag; sourceTree = "<group>"; };
+		39A358F823045DFF008D67D6 /* texture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture.jpg; sourceTree = "<group>"; };
+		39B09FD5230C309000E5514B /* BaseApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseApp.cpp; sourceTree = "<group>"; };
+		39B09FD6230C309000E5514B /* BaseApp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseApp.hpp; sourceTree = "<group>"; };
+		39B09FD8230C392900E5514B /* ComputeMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComputeMain.cpp; sourceTree = "<group>"; };
+		39B09FD9230C392900E5514B /* ComputeMain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComputeMain.hpp; sourceTree = "<group>"; };
+		39B09FDB230C5BD300E5514B /* shader.comp */ = {isa = PBXFileReference; lastKnownFileType = text; path = shader.comp; sourceTree = "<group>"; };
+		39B09FDD230C5C9100E5514B /* comp.spv */ = {isa = PBXFileReference; lastKnownFileType = file; path = comp.spv; sourceTree = "<group>"; };
+		39B09FDF230EC62000E5514B /* ed25519_ref10_fe_25_5.comp */ = {isa = PBXFileReference; lastKnownFileType = text; path = ed25519_ref10_fe_25_5.comp; sourceTree = "<group>"; };
+		39B09FE0230ED3D400E5514B /* ed25519.spv */ = {isa = PBXFileReference; lastKnownFileType = file; path = ed25519.spv; sourceTree = "<group>"; };
 		39B5667B22FDB16900866553 /* vert.spv */ = {isa = PBXFileReference; lastKnownFileType = text; path = vert.spv; sourceTree = "<group>"; };
 		39B5667C22FDB17A00866553 /* frag.spv */ = {isa = PBXFileReference; lastKnownFileType = text; path = frag.spv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,11 +120,16 @@
 		3918E43622FC75DA0099D9BC /* TestingVulkan */ = {
 			isa = PBXGroup;
 			children = (
+				39A358F723045DA3008D67D6 /* textures */,
 				3918E45E22FDA5B90099D9BC /* shaders */,
 				3918E43722FC75DA0099D9BC /* check.cpp */,
 				3918E45A22FC7DCB0099D9BC /* main.cpp */,
 				3918E45B22FC7DCB0099D9BC /* main.hpp */,
 				3918E45D22FCCEB30099D9BC /* optional.h */,
+				39B09FD5230C309000E5514B /* BaseApp.cpp */,
+				39B09FD8230C392900E5514B /* ComputeMain.cpp */,
+				39B09FD9230C392900E5514B /* ComputeMain.hpp */,
+				39B09FD6230C309000E5514B /* BaseApp.hpp */,
 			);
 			path = TestingVulkan;
 			sourceTree = "<group>";
@@ -125,12 +147,24 @@
 		3918E45E22FDA5B90099D9BC /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				39B09FE0230ED3D400E5514B /* ed25519.spv */,
+				39B09FDD230C5C9100E5514B /* comp.spv */,
 				3918E45F22FDA5E30099D9BC /* shader.vert */,
 				3918E46022FDA5FE0099D9BC /* shader.frag */,
 				39B5667B22FDB16900866553 /* vert.spv */,
 				39B5667C22FDB17A00866553 /* frag.spv */,
+				39B09FDB230C5BD300E5514B /* shader.comp */,
+				39B09FDF230EC62000E5514B /* ed25519_ref10_fe_25_5.comp */,
 			);
 			path = shaders;
+			sourceTree = "<group>";
+		};
+		39A358F723045DA3008D67D6 /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				39A358F823045DFF008D67D6 /* texture.jpg */,
+			);
+			path = textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +224,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3918E45C22FC7DCB0099D9BC /* main.cpp in Sources */,
+				39B09FD7230C309000E5514B /* BaseApp.cpp in Sources */,
+				39B09FDA230C392900E5514B /* ComputeMain.cpp in Sources */,
 				3918E43822FC75DA0099D9BC /* check.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +351,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/armkha01/vulkan/sdk/macOS/include,
 					/usr/local/include,
+					/Users/armkha01/vulkan/libs/stb,
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = (
 					"/Users/armkha01/vulkan/sdk/macOS/lib/**",
@@ -331,6 +368,7 @@
 				HEADER_SEARCH_PATHS = (
 					/Users/armkha01/vulkan/sdk/macOS/include,
 					/usr/local/include,
+					/Users/armkha01/vulkan/libs/stb,
 				);
 				"LIBRARY_SEARCH_PATHS[arch=*]" = (
 					/Users/armkha01/vulkan/sdk/macOS/lib,

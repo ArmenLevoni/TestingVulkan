@@ -672,7 +672,7 @@ void BaseApp::setupInputBuffer() {
         inPmappedMemory[i].value[1].value[9] = 9;
         
     }
-    //vkUnmapMemory(device, inBufferMemory);
+    vkUnmapMemory(device, inBufferMemory);
 }
 
 void BaseApp::reportResult() {
@@ -692,7 +692,7 @@ void BaseApp::reportResult() {
     std::vector<int> image1;
     image1.reserve(WORK_TOTAL_SIZE * 10);
     
-    for (int i = 0; i < 1; i += 1) {
+    for (int i = 0; i < WORK_TOTAL_SIZE; i += 1) {
         image1.push_back(((outPmappedMemory[i].value[0])));
         image1.push_back(((outPmappedMemory[i].value[1])));
         image1.push_back(((outPmappedMemory[i].value[2])));

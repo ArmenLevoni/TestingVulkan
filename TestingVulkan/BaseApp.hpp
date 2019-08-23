@@ -24,7 +24,7 @@ assert(res == VK_SUCCESS);                                                      
 }                                                                                                    \
 }
 
-const int WORK_TOTAL_SIZE = 16;
+const int WORK_TOTAL_SIZE = 256;
 const int WORKGROUP_SIZE = 16; // Workgroup size in compute shader.
 
 class BaseApp {

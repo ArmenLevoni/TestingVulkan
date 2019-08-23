@@ -2,9 +2,12 @@
 #extension GL_ARB_separate_shader_objects : enable
 
 #define WORKGROUP_SIZE 16
-#define WORK_TOTAL_SIZE 1024
+#define WORK_TOTAL_SIZE 256
 
 layout (local_size_x = WORKGROUP_SIZE, local_size_y = 1, local_size_z = 1 ) in;
+//layout (local_size_x = 1, local_size_y = 1, local_size_z = 1 ) in;
+
+
 
 struct fe25519 {
     int value [10];
@@ -15,12 +18,12 @@ struct duble_fe25519 {
 };
 
 
-layout(std140, set = 0, binding = 0) buffer buf1
+layout( set = 0, binding = 0) buffer buf1
 {
     duble_fe25519 imageDataIn[];
 };
 
-layout(std140, set = 1, binding = 0) buffer buf2
+layout( set = 1, binding = 0) buffer buf2
 {
     fe25519 imageDataOut[];
 };
@@ -41,7 +44,7 @@ const int[10] sqrtm1 = {-32595792, -7943725,  9377950,  3500415, 12389472, -2724
 /* A = 486662 */
 const int[10] curve25519_A = {486662, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
-fe25519  fe25519_sub(const fe25519 f, const fe25519 g)
+fe25519  fe25519_sub(fe25519 f, fe25519 g)
 {
     fe25519 h;
     int h0 = f.value[0] - g.value[0];
@@ -77,10 +80,16 @@ void main() {
     if(gl_GlobalInvocationID.x >= WORK_TOTAL_SIZE)
     return;
 
-    for (int i=0; i<10;i++) {
-        imageDataOut[gl_GlobalInvocationID.x].value[i] = 11;// imageDataIn[gl_GlobalInvocationID.x].value[0];
-    }
+    uint idx = gl_GlobalInvocationID.x + gl_GlobalInvocationID.y * gl_NumWorkGroups.x * gl_WorkGroupSize.x;
 
-    //imageDataOut[gl_GlobalInvocationID.x] = fe25519_sub(imageDataIn[gl_GlobalInvocationID.x].value[0], imageDataIn[gl_GlobalInvocationID.x].value[1]);
+    fe25519 a;
+    fe25519 b;
+    fe25519 c;
+
+    a = imageDataIn[idx].value[0];
+    b = imageDataIn[idx].value[1];
+
+    c  = fe25519_sub(a, b);
+    imageDataOut[idx] = c;
 }
 
